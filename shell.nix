@@ -7,11 +7,17 @@ let
     url = "https://github.com/NixOS/nixpkgs/archive/${commitRev}.tar.gz";
   };
 
+  tex = (pkgs.texliveSmall.withPackages (ps: with ps; [
+
+  ]));
+
 in
 
 pkgs.mkShell {
   nativeBuildInputs = with pkgs.buildPackages; [
+    gnumake
     binwalk
     qpdf
+    tex
   ];
 }

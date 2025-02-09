@@ -1,4 +1,3 @@
 .gemini-api.key
 .venv/
-logs_*.txt
 *.pyc
